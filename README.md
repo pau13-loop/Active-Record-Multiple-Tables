@@ -1,0 +1,1 @@
+mvn io.quarkus:quarkus-maven-plugin:1.13.1.Final:create -DprojectGroupId=edu.pingpong -DprojectArtifactId=activerecordmultipletables -DclassName="edu.pingpong.activerecordmultipletables.MoviesResource" -Dpath="/movies"
