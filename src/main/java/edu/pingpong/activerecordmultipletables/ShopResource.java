@@ -5,8 +5,8 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-@Path("/movies")
-public class MoviesResource {
+@Path("/shop")
+public class ShopResource {
 
     @GET
     @Produces(MediaType.TEXT_PLAIN)
