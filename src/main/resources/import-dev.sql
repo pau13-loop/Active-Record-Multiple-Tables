@@ -1,6 +1,6 @@
+drop table if exists t_orders;
 drop table if exists t_users;
 drop table if exists t_items;
-drop table if exists t_orders;
 
 create table t_users (
     user_name varchar(255),
@@ -16,10 +16,10 @@ create table t_items (
 );
 
 create table t_orders (
-    order_id bigint not null auto_increment,
+    ord_id bigint not null auto_increment,
     ord_user varchar(255),
     ord_item varchar(255),
-    primary key (order_id),
+    primary key (ord_id),
     constraint `orden_item_fk` foreign key (ord_item) references t_items(item_name)
                       on delete set null
                       on update set null,
@@ -38,7 +38,7 @@ insert into t_items (item_name, item_prop, item_type) values
     ('Coca Cola', 60, 'drink'),
     ('Bread', 70, 'food');
 
-insert into t_orders (order_id, ord_user, ord_item) values
+insert into t_orders (ord_id, ord_user, ord_item) values
     (1000, 'Pau', 'Lolli Pop'),
     (2000, 'Pau', 'Bread'),
     (3000, 'Lily', 'Coca Cola'),
